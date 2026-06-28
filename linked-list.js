@@ -124,7 +124,14 @@ export default class LinkedList{
 
 
     findIndex(value){
-
+        let currentNode = this.head;
+        let index = 0;
+        while(currentNode !== null){
+            if(currentNode.value === value) return index;
+            index++;
+            currentNode = currentNode.next;
+        }
+        return -1;
     }
 
 
