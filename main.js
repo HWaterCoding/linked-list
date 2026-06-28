@@ -13,8 +13,11 @@ list.prepend(4);
 // console.log(list.tailNode());
 
 // console.log(list.at(3));
-console.log(list.pop());
-// list.contains();
+// console.log(list.pop());
+// console.log(list.pop());
+
+console.log(list.contains(3));
+console.log(list.contains(4));
 // list.findIndex();
 // list.toString();
 
