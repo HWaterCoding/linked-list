@@ -22,13 +22,16 @@ list.prepend(4);
 // console.log(list.contains(3));
 // console.log(list.contains(4));
 
-console.log(list.findIndex(1));
-console.log(list.findIndex(10));
-
-// list.toString();
+// console.log(list.findIndex(1));
+// console.log(list.findIndex(10));
 
 
-// list.insertAt();
+list.insertAt(1, 10, 11); //4, 10, 11, 5, 10, 20
+list.insertAt(8, 10, 11); //throw error
+
+// list.removeAt();
 // list.removeAt();
 
+
+//toString() method for visual representation of current list state
 console.log(list.toString());

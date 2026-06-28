@@ -137,8 +137,45 @@ export default class LinkedList{
 
 
     //extras
-    insertAt(index){
+    insertAt(index, ...values){
+        //if no values, return early.
+        if(values.length === 0) return;
+        
+        //use the first value in the parameters to create the first new node and store it
+        let firstNewNode = new Node(values[0]);
+        let lastNewNode = firstNewNode;
 
+        //use a basic for loop to create and chain the rest of the nodes in order
+        for (let i = 1; i < values.length; i++) {
+            lastNewNode.next = new Node(values[i]);
+            lastNewNode = lastNewNode.next;
+        }
+
+        //if the index is 0, then prepend these nodes
+        if(index === 0){
+            lastNewNode.next = this.head;
+            this.head = firstNewNode;
+            return;
+        }
+
+        //store the currentNode as the head, and the index as 0
+        let currentNode = this.head;
+        let currentIndex = 0;
+        
+        //loop through nodes until right before the passed in index.
+        while(currentNode !== null && currentIndex < index - 1){
+            currentNode = currentNode.next; 
+            currentIndex++;
+        }
+        
+        //if index too high, throw error.
+        if (currentNode === null) {
+            throw new RangeError("Index doesn't exist, G.");
+        }
+
+        const after = currentNode.next;
+        currentNode.next = firstNewNode;
+        lastNewNode.next = after;
     }
 
 
