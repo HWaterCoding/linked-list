@@ -108,6 +108,8 @@ export default class LinkedList{
     pop(){
         let head = this.head;
         if(head === null) return undefined;
+        this.head = head.next;
+        return head.value;
     }
 
 

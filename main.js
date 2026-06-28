@@ -12,8 +12,8 @@ list.prepend(4);
 // console.log(list.headNode());
 // console.log(list.tailNode());
 
-console.log(list.at(3));
-// list.pop();
+// console.log(list.at(3));
+console.log(list.pop());
 // list.contains();
 // list.findIndex();
 // list.toString();
@@ -22,4 +22,4 @@ console.log(list.at(3));
 // list.insertAt();
 // list.removeAt();
 
-// console.log(list.toString());
+console.log(list.toString());
