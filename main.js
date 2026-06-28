@@ -12,7 +12,7 @@ list.prepend(4);
 // console.log(list.headNode());
 // console.log(list.tailNode());
 
-console.log(list.at(2));
+console.log(list.at(3));
 // list.pop();
 // list.contains();
 // list.findIndex();

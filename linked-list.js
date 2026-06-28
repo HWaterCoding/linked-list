@@ -83,7 +83,7 @@ export default class LinkedList{
         }
     }
     
-    
+
     tailNode(){
         let currentNode = this.head;
         while(currentNode.next !== null){
@@ -99,14 +99,15 @@ export default class LinkedList{
         while(nodesCycled < index){
             currentNode = currentNode.next;
             nodesCycled++;
+            if(currentNode === null) return undefined;
         }
-        if(currentNode === null) return undefined;
         return currentNode.value;
     }
 
 
     pop(){
-
+        let head = this.head;
+        if(head === null) return undefined;
     }
 
 
