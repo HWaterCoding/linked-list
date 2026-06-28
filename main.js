@@ -8,11 +8,11 @@ list.append(10);
 list.append(20);
 list.prepend(5);
 list.prepend(4);
-console.log(list.size());
-console.log(list.headNode());
+// console.log(list.size());
+// console.log(list.headNode());
+// console.log(list.tailNode());
 
-console.log(list.tailNode());
-// list.at();
+console.log(list.at(2));
 // list.pop();
 // list.contains();
 // list.findIndex();
@@ -22,4 +22,4 @@ console.log(list.tailNode());
 // list.insertAt();
 // list.removeAt();
 
-console.log(list.toString());
+// console.log(list.toString());
