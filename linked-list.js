@@ -173,6 +173,7 @@ export default class LinkedList{
             throw new RangeError("Index doesn't exist, G.");
         }
 
+        //assign places in new chain
         const after = currentNode.next;
         currentNode.next = firstNewNode;
         lastNewNode.next = after;
@@ -180,7 +181,31 @@ export default class LinkedList{
 
 
     removeAt(index){
+        let currentNode = this.head;
+        let currentIndex = 0;
 
+        if(index === 0){
+            this.head = currentNode.next;
+            return;
+        }
+        
+        while(currentNode !== null && currentIndex < index - 1){
+            currentNode = currentNode.next;
+            currentIndex++;
+        }
+
+        const nodeBefore = currentNode;
+
+        while(currentNode !== null && currentIndex <= index){
+            currentNode = currentNode.next;
+            currentIndex++;
+        }
+
+        if(currentNode === null){
+            throw new RangeError("Index doesn't exist, bro.")
+        }
+
+        const nodeAfter = currentNode;
+        nodeBefore.next = nodeAfter;
     }
-
 }

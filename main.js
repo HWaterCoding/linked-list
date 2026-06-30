@@ -26,11 +26,12 @@ list.prepend(4);
 // console.log(list.findIndex(10));
 
 
-list.insertAt(1, 10, 11); //4, 10, 11, 5, 10, 20
-list.insertAt(8, 10, 11); //throw error
+// list.insertAt(1, 10, 11); //4, 10, 11, 5, 10, 20
+// list.insertAt(8, 10, 11); //throw error
 
-// list.removeAt();
-// list.removeAt();
+// list.removeAt(2);
+// list.removeAt(0); //remove head node
+// list.removeAt(5); //throw error
 
 
 //toString() method for visual representation of current list state
