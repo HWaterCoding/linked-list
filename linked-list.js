@@ -194,8 +194,6 @@ export default class LinkedList{
             currentIndex++;
         }
 
-        const nodeBefore = currentNode;
-
         if(currentNode === null){
             throw new RangeError("Index doesn't exist, bro.")
         }
